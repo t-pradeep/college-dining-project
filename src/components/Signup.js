@@ -4,7 +4,7 @@ import NavBarLogin from "../navigation/NavLogin"
 import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import Footer from "../navigation/Footer"
 import classnames from "classnames";
 import axios from 'axios';

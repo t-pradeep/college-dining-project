@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import "../static/css/Signup.css";
-import NavBarLogin from "./navBarLogin"
+import "../assets/css/Signup.css";
+import NavBarLogin from "../navigation/NavLogin"
 import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import Footer from "./footer"
+import Footer from "../navigation/Footer"
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 import { store } from 'react-notifications-component';
 
 
-export default class AddFlight extends Component {
+export default class Request_for_Sub extends Component {
 
   constructor() {
     super();
@@ -56,17 +56,14 @@ export default class AddFlight extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const newRequest = {
-      flightNumber: this.state.flightNumber,
-      departurePlace : this.state.departurePlace,
-      departureDate: this.state.departureDate,
-      departureTime: this.state.departureTime,
-      noOfSeats: this.state.noOfSeats,
-      arrivalPlace:this.state.arrivalPlace,
-      arrivalDate: this.state.arrivalDate,
-      arrivalTime:this.state.arrivalTime
+      name: this.state.name,
+      date : this.state.date,
+      timing: this.state.timing,
+      station: this.state.station,
+      
     };
-    console.log(newFlight)
-    axios.post('http://localhost:5000/flights/add', newFlight)
+    console.log(newRequest)
+    axios.post('http://localhost:5000/subrequest/add', newRequest)
     .then(res => {
           console.log(res.data)
           store.addNotification({
@@ -92,93 +89,53 @@ export default class AddFlight extends Component {
     return (
       <div>
         <NavBarLogin />
-        <div className="signup form-wrapper">
-          <h2>Add Flight</h2>
+        <div className="">
+          <h2>Name</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="inputBox vertical-center width70">
-              <label htmlFor="flightNumber">Flight Number</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="text"
-                placeholder="Flight number"
-                name="flightNumber"
+                placeholder="Name"
+                name="name"
                 class=""
-                value={this.state.flightNumber}
+                value={this.state.name}
                 onChange={this.handleValueChange}            
               />           
             </div>
             <div className="inputBox vertical-center width70">
-              <label htmlFor="departurePlace" class="mt20">Departure Place</label>
+              <label htmlFor="timing" class="mt20">Timing</label>
               <input
                 type="text"
-                placeholder="Departure place"
-                name="departurePlace"
-                value={this.state.departurePlace}
+                placeholder="Timing"
+                name="timing"
+                value={this.state.timing}
                 onChange={this.handleValueChange}
               />
             </div>
             <div className="inputBox vertical-center width70">
-              <label htmlFor="departureDate" class="mt20">Depature Date</label>
+              <label htmlFor="date" class="mt20">Date</label>
               <DatePicker placeholderText="MM/DD/YYYY"
-                                selected={this.state.departureDate}
-                                onChange={this.onChangeDepartingDate}
+                                selected={this.state.date}
+                                onChange={this.onChangeDate}
                             />
             </div>
 
             <div className="inputBox vertical-center width70">
-              <label htmlFor="departureTime" class="mt20">Departure Time</label>
+              <label htmlFor="station" class="mt20">Station</label>
               <input
                 type="text"
                
-                placeholder="Departure time"
-                name="departureTime"
-                value={this.state.departureTime}
-                onChange={this.handleValueChange}
-              />
-            </div>
-
-            <div className="inputBox vertical-center width70">
-              <label htmlFor="noOfSeats" class="mt20">Seats Available</label>
-              <input
-                type="number"
-               
-                placeholder="Available seats"
-                name="noOfSeats"
-                value={this.state.noOfSeats}
-                onChange={this.handleValueChange}
-              />
-            </div>
-
-            <div className="inputBox vertical-center width70">
-              <label htmlFor="noOfSeats" class="mt20">Arrival place</label>
-              <input
-                type="text"               
-                placeholder="Arrival place"
-                name="arrivalPlace"
-                value={this.state.arrivalPlace}
-                onChange={this.handleValueChange}
-              />
-            </div>
-            <div className="inputBox vertical-center width70">
-              <label htmlFor="arrivalDate" class="mt20">Arrival Date</label>
-              <DatePicker  placeholderText="MM/DD/YYYY"
-                                selected={this.state.arrivalDate}
-                                onChange={this.onChangeArrivingDate}
-                            />
-            </div>
-            <div className="inputBox vertical-center width70">
-              <label htmlFor="dep" class="mt20">Arrival Time</label>
-              <input
-                type="text"
-                placeholder="Time of arrival"
-                name="arrivalTime"
-                value={this.state.arrivalTime}
+                placeholder="Station"
+                name="station"
+                value={this.state.station}
                 onChange={this.handleValueChange}
               />
             </div>
             
             <div class="text-center mt20">
               <Button 
-                bssize="large" type="submit">Add flight</Button>
+                bssize="large" type="submit">Submit</Button>
               
             </div>
           </form>
