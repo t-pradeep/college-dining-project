@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import NavBarLogin from "../navigation/NavLogin";
 import Footer from "../navigation/Footer";
 import '../assets/css/Login.css'
+import PropTypes from "prop-types";
+import classnames from "classnames";
 import axios from 'axios';
 import { store } from 'react-notifications-component';
 
-export default class Login extends Component {
+export default class AdminLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,7 +36,7 @@ export default class Login extends Component {
       email: this.state.email,
       password: this.state.password
     };
-    axios.post('http://localhost:5000/users/login', userData)
+    axios.post('http://localhost:3000/users/login', userData)
       .then(res => {
         console.log(res.data)
         if (res.data.code == 200) {
@@ -78,31 +80,44 @@ export default class Login extends Component {
     return (
       <div>
         <NavBarLogin />
-        <div className="card w-25">
+        <div className="Login" style={{ 'margin-bottom': '122px' }}>
           <form onSubmit={this.handleSubmit}>
-            <h5 className="text-center"><strong>Signin</strong><br/>
-           to continue to Eat & Go</h5>
+          <h3 className="text-center">Admin login into account</h3>
 
             <FormGroup controlId="email" bsssize="large">
               <FormLabel>Email</FormLabel>
-              <FormControl autoFocus type="email" value={this.state.email} onChange={this.handleChange} />
-            </FormGroup>
+              <FormControl
+                autoFocus
+                type="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
 
+            </FormGroup>
             <FormGroup controlId="password" bssize="large">
               <FormLabel>Password</FormLabel>
-              <FormControl value={this.state.password} onChange={this.handleChange} type="password" />
+              <FormControl
+                value={this.state.password}
+                onChange={this.handleChange}
+                type="password"
+              />
+
             </FormGroup>
+            <Button
+              block
+              bssize="large"
+              disabled={!this.validateForm()}
+              type="submit"
+            >
 
-            <Button block bssize="large" text={!this.validateForm()} type="submit">Login</Button>
-            <Link to="/forgotPassword" variant="body2">Forgot password?</Link>
-            <p className="text-center">or</p>
-            <Button block bssize="large" href="signup">Create an account</Button>
-
-
+              Login
+          </Button>
+            <Link to="/forgotPassword" variant="body2">
+              Forgot password?
+              </Link>
           </form>
         </div>
         <Footer />
-
       </div>
     );
   }

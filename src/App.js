@@ -1,37 +1,33 @@
 import React from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ReactNotification from 'react-notifications-component';
 import Home from './components/Home';
 import Login from './components/Login';
+import Signup from './components/Signup';
+import ManageUser from './components/ManangeUser';
 import 'react-notifications-component/dist/theme.css';
+import AdminLogin from './components/AdminLogin';
+import Aboutus from './components/Aboutus';
+import Contactus from './components/Contactus';
+import  NoPageFound  from './NoPageFound';
 
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-
+    
     <Router>
-        <ReactNotification />
-    <div>
-      <Route path="/" exact component={Home} />
-      <Route path="/login" exact component={Login} />
+      <ReactNotification />
+      <div >
+        <Route exact path="/"  component={Home} />
+        <Route exact path="/login"  component={Login} />
+        <Route exact path="/signup"  component={Signup} />
+        <Route exact path="/admin"  component={AdminLogin} />
+        <Route exact path="/manageuser"  component={ManageUser} />
+        <Route exact path="/aboutus"  component={Aboutus} />
+        <Route exact path="/contactus"  component={Contactus} />
+
       </div>
     </Router>
   );
