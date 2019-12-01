@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from '../assets/images/logo.jpg';
 import NavLogin from '../navigation/NavLogin';
 
-class Login extends Component {
+class Homepage extends Component {
   render() {
     return (
       <div>
@@ -21,9 +21,6 @@ class Login extends Component {
                   <h5 className="card-title">Campus dining</h5>
                   <p className="card-text">Come eat our food and complete your hunger</p>
                   <br /><br />
-                  <a className="btn btn-primary" href="login">User Login</a>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="admin" className="btn btn-primary">Admin login</a>
                 </div>
               </div>
             </div>
@@ -36,4 +33,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Homepage;

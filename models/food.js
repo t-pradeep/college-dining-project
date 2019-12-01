@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const exerciseSchema = new Schema({
-  flightNumber: { type: String, required: true },
-  departurePlace: { type: String, required: true },
-  departureDate: { type: Date, required: true },
+const foodSchema = new Schema({
+  foodName: { type: String, required: true },
+  foodDesc: { type: String, required: true },
+  foodDay: { type: Date, required: true },
   departureTime: { type: String, required: true },
   noOfSeats:     { type: Number, required: true },
   arrivalPlace:  { type: String, required: true },
@@ -15,7 +15,7 @@ const exerciseSchema = new Schema({
   timestamps: true,
 });
 
-const Flight = mongoose.model('Flight', exerciseSchema);
+const Food = mongoose.model('Food', foodSchema);
 
-module.exports = Flight;
+module.exports = Food;
 

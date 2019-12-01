@@ -1,13 +1,19 @@
 @media all and (min-width: 480px) {
-    .Login {
-      padding: 30px 0;
-    }
+
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 100px; /* Added */
+  margin-top: 100px;
+  padding: 15px;
+}
   
-    .Login form {
+    /* form {
       margin: 0 auto;
       max-width: 320px;
-      margin: 150px;
-    }
+      margin-top: 80px;
+    } */
+    
 
    
     .bg-dark{
@@ -22,5 +28,4 @@
     .navbar-dark .navbar-nav .nav-link {
       color: #FFFFFF;
   }
-  }
-  
+}
