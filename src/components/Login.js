@@ -52,7 +52,7 @@ export default class Login extends Component {
               onScreen: true
             }
           });
-          this.props.history.push({ pathname: '/listofflights' })
+          this.props.history.push({ pathname: '/home' })
         }
         else {
           store.addNotification({

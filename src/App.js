@@ -12,6 +12,7 @@ import AdminLogin from './components/AdminLogin';
 import Aboutus from './components/Aboutus';
 import Contactus from './components/Contactus';
 import  NoPageFound  from './NoPageFound';
+import Homepage from './components/Homepage';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/manageuser"  component={ManageUser} />
         <Route exact path="/aboutus"  component={Aboutus} />
         <Route exact path="/contactus"  component={Contactus} />
+        <Route exact path ="/home" component={Homepage}/>
 
       </div>
     </Router>
