@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../assets/css/Signup.css";
+// import "../assets/css/Signup.css";
 import NavBarLogin from "../navigation/NavLogin"
 import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -99,7 +99,7 @@ export default class Signup extends Component {
     return (
       <div>
         <NavBarLogin />
-        <div className="signup form-wrapper">
+        <div className="card w-50">
           <h2>Create Account</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="inputBox width70">

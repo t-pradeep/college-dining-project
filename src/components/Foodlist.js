@@ -1,12 +1,16 @@
 import React, { Component } from "react";
-import '../assets/css/Foodlist.css'
+import '../assets/css/Foodlist.css';
+import NavBarLogin from '../navigation/UserNav';
+import Footer from '../navigation/Footer';
 
 class Foodlist extends Component{
     
   render(){
       
     return (
-       
+      <div>
+      <div class='container'>
+    <NavBarLogin />
         <table Foodlist="tg">
           <tr>
             <th Foodlist="tg-rykj">STATIONS</th>
@@ -84,6 +88,9 @@ class Foodlist extends Component{
             
           </tr>
         </table>
+        </div>
+      <Footer/>
+      </div>
     )
   }
 }

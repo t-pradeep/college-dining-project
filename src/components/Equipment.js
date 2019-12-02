@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, FormLabel, Navbar } from "react-bootstrap";
-
+import NavBarLogin from '../navigation/UserNav';
+import Footer from '../navigation/Footer';
 
 class Equipment extends Component {
   constructor(props) {
@@ -13,6 +14,9 @@ class Equipment extends Component {
   render() {
     const { errors } = this.state;
     return (
+      <div>
+        <div class='container'>
+      <NavBarLogin />
       <div class="row">
         <div class="col-md-6">
           <div className="Login" style={{ 'margin-bottom': '122px' }}></div>
@@ -59,6 +63,9 @@ class Equipment extends Component {
           </form>
 
         </div>
+      </div>
+      </div>
+      <Footer/>
       </div>
 
     )

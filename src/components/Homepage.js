@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import logo from '../assets/images/logo.jpg';
-import NavLogin from '../navigation/NavLogin';
+import NavLogin from '../navigation/UserNav';
 
 class Homepage extends Component {
   render() {

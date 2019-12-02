@@ -1,9 +1,13 @@
 import React, { Component } from "react";
+import NavBarLogin from '../navigation/UserNav';
+import Footer from '../navigation/Footer';
 
 class Schedule extends Component {
     render() {
         return (
-            
+            <div>
+            <div class='container'>
+              <NavBarLogin /> 
             <table Schedule="tg">
                 <tr>
                     <th Schedule="tg-rykj">STATIONS</th>
@@ -76,6 +80,9 @@ class Schedule extends Component {
                     <td Schedule="tg-0lax"></td>
                 </tr>
             </table>
+                    </div>
+                    <Footer />
+                  </div>
         )
     }
 }
