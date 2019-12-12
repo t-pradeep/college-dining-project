@@ -1,45 +1,41 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Nav, Navbar, NavDropdown, NavItem, Form, FormControl, Button } from "react-bootstrap";
 
-class UserNav extends React.Component{
-    render(){
-        return(
-            <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-primary justify-content-between">
-            <a className="navbar-brand" href="/">EAT & GO</a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
-                  <a className="nav-link" href="/">HOME <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/schedule">SCHEDULE</a>
-                </li><li className="nav-item">
-                  <a className="nav-link" href="/foodlist">FOOD LIST</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/equipment">EQUIPMENT</a>
-                </li>
+class UserNav extends React.Component {
+  render() {
+    return (
+      <Navbar className="navbar navbar-expand-md navbar-dark fixed-top bg-primary justify-content-between">
+        <Navbar.Brand href="\">EAT & GO</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="\home">HOME</Nav.Link>
+            <Nav.Link href="\schedule">SCHEDULE</Nav.Link>
+            <NavDropdown title="FOOD LIST" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/monday">Monday</NavDropdown.Item>
+              <NavDropdown.Item href="/tuesday">Tuesday</NavDropdown.Item>
+              <NavDropdown.Item href="/wednesday">Wednesday</NavDropdown.Item>
+              <NavDropdown.Item href="/thursday">Thursday</NavDropdown.Item>
+              <NavDropdown.Item href="/friday">Friday</NavDropdown.Item>
+              <NavDropdown.Item href="/saturday">Saturday</NavDropdown.Item>
+              <NavDropdown.Item href="/sunday">Sunday</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Select day to display food</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="/contactus">CONTACT US</Nav.Link>
+            <Nav.Link href="/aboutus">ABOUT US</Nav.Link>
+          </Nav>
 
-                <li className="nav-item">
-                  <a className="nav-link" href="/contactus">CONTACT US</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/aboutus">ABOUT US</a>
-                </li>
-                </ul>
-                <ul class="nav navbar-nav float-md-right">
-                <li className="nav-item">
-                        <a className="nav-link" href="/logout">LOGOUT</a>
-                        </li>
-                
-              </ul>
-            </div>
-          </nav>
-        );
-    }
+
+
+          <Form inline  className="mr-auto">
+            <Nav.Link href="\home">LOGOUT</Nav.Link>
+          </Form>
+        </Navbar.Collapse>
+      </Navbar>
+    );
+  }
 }
 
 export default UserNav;

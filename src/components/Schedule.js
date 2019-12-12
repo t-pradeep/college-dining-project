@@ -6,83 +6,168 @@ class Schedule extends Component {
     render() {
         return (
             <div>
-            <div class='container'>
-              <NavBarLogin /> 
-            <table Schedule="tg">
-                <tr>
-                    <th Schedule="tg-rykj">STATIONS</th>
-                    <th Schedule="tg-0lax">MONDAY</th>
-                    <th Schedule="tg-0lax">TUESDAY</th>
-                    <th Schedule="tg-0lax">WEDNESDAY</th>
-                    <th Schedule="tg-0lax">THURSDAY</th>
-                    <th Schedule="tg-0lax">FRIDAY</th>
-                    <th Schedule="tg-0lax">SATURDAY</th>
-                    <th Schedule="tg-0lax">SUNDAY</th>
-                </tr>
-                <tr>
-                    <td Schedule="tg-0lax">PRODUCE MARKET</td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                </tr>
-                <tr>
-                    <td Schedule="tg-0lax">GRILL</td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                </tr>
-                <tr>
-                    <td Schedule="tg-0lax">ENTREE</td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                </tr>
-                <tr>
-                    <td Schedule="tg-0lax">TEX MEX</td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                </tr>
-                <tr>
-                    <td Schedule="tg-0lax">TRUE BALANCE</td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                </tr>
-                <tr>
-                    <td Schedule="tg-0lax">MANGOLIAN</td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                    <td Schedule="tg-0lax"></td>
-                </tr>
-            </table>
+                <div class='container'>
+                    <NavBarLogin />
+
+                    <div className="row mb10" style={{ 'marginTop': '122px' }}>
+                        <div className="col-md-2 vertical-center">
+                            <h5> Day</h5>
+                        </div>
+                        <div className="col-md-3" vertical-center>
+                            <h5>Station</h5>
+                        </div>
+                        <div className="col-md-7" vertical-center>
+                            <h5>Schedule</h5>
+                        </div>
+
                     </div>
-                    <Footer />
-                  </div>
+
+                    <div className="row mb10">
+                        <div className="col-md-2 vertical-center">
+                            <h5> MONDAY</h5>
+                        </div>
+                        <div className="col-md-3" vertical-center>
+                            <h5>GRILL</h5>
+                        </div>
+                        <div className="col-md-7" vertical-center>
+                            <div>Pradeepkumar 6AM to 10AM</div>
+                            <div>Raghav 7AM to 11AM</div>
+                            <div>Gopi 10AM to 12PM</div>
+                            <div>Chaitra 11AM to 6PM</div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+                    </div>
+                    <div className="row mb10">
+                        <div className="col-md-2 vertical-center">
+                            <h5> MONDAY</h5>
+                        </div>
+                        <div className="col-md-3" vertical-center>
+                            <h5>GRILL</h5>
+                        </div>
+                        <div className="col-md-7" vertical-center>
+                            <div>Pradeepkumar 6AM to 10AM</div>
+                            <div>Raghav 7AM to 11AM</div>
+                            <div>Gopi 10AM to 12PM</div>
+                            <div>Chaitra 11AM to 6PM</div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+                    </div>
+                    <div className="row mb10">
+                        <div className="col-md-2 vertical-center">
+                            <h5> MONDAY</h5>
+                        </div>
+                        <div className="col-md-3 vertical-center">
+                            <h5>GRILL</h5>
+                        </div>
+                        <div className="col-md-7">
+                            <div>Pradeepkumar 6AM to 10AM</div>
+                            <div>Raghav 7AM to 11AM</div>
+                            <div>Gopi 10AM to 12PM</div>
+                            <div>Chaitra 11AM to 6PM</div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+                    </div>
+                    <div className="row mb10">
+                        <div className="col-md-2 vertical-center">
+                            <h5> MONDAY</h5>
+                        </div>
+                        <div className="col-md-3" vertical-center>
+                            <h5>GRILL</h5>
+                        </div>
+                        <div className="col-md-7" vertical-center>
+                            <div>Pradeepkumar 6AM to 10AM</div>
+                            <div>Raghav 7AM to 11AM</div>
+                            <div>Gopi 10AM to 12PM</div>
+                            <div>Chaitra 11AM to 6PM</div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+                    </div>
+
+                    <div className="row mb10">
+                        <div className="col-md-2 vertical-center">
+                            <h5> MONDAY</h5>
+                        </div>
+                        <div className="col-md-3" vertical-center>
+                            <h5>GRILL</h5>
+                        </div>
+                        <div className="col-md-7" vertical-center>
+                            <div>Pradeepkumar 6AM to 10AM</div>
+                            <div>Raghav 7AM to 11AM</div>
+                            <div>Gopi 10AM to 12PM</div>
+                            <div>Chaitra 11AM to 6PM</div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+                    </div>
+                    <div className="row mb10">
+                        <div className="col-md-2 vertical-center">
+                            <h5> MONDAY</h5>
+                        </div>
+                        <div className="col-md-3" vertical-center>
+                            <h5>GRILL</h5>
+                        </div>
+                        <div className="col-md-7" vertical-center>
+                            <div>Pradeepkumar 6AM to 10AM</div>
+                            <div>Raghav 7AM to 11AM</div>
+                            <div>Gopi 10AM to 12PM</div>
+                            <div>Chaitra 11AM to 6PM</div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div className="row mb10">
+                        <div className="col-md-2 vertical-center">
+                            <h5> MONDAY</h5>
+                        </div>
+                        <div className="col-md-3" vertical-center>
+                            <h5>GRILL</h5>
+                        </div>
+                        <div className="col-md-7" vertical-center>
+                            <div>Pradeepkumar 6AM to 10AM</div>
+                            <div>Raghav 7AM to 11AM</div>
+                            <div>Gopi 10AM to 12PM</div>
+                            <div>Chaitra 11AM to 6PM</div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <Footer />
+            </div>
         )
     }
 }

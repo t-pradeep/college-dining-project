@@ -18,6 +18,14 @@ import Aboutus from './components/Aboutus';
 import Contactus from './components/Contactus';
 import NoPageFound from './NoPageFound';
 import Homepage from './components/Homepage';
+import Monday from './components/Monday';
+import Tuesday from './components/Tuesday';
+import Wednesday from './components/Wednesday';
+import Thursday from './components/Thursday';
+import Friday from './components/Friday';
+import Saturday from './components/Saturday';
+import Sunday from './components/Sunday';
+
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -28,6 +36,14 @@ function App() {
       <ReactNotification />
       <div>
         <Route path="/" exact component={Home} />
+        <Route path="/monday" exact component={Monday} />
+        <Route exact path="/tuesday" component={Tuesday} />
+        <Route exact path="/wednesday" component={Wednesday} />
+        <Route exact path="/thursday" component={Thursday} />
+        <Route exact path="/friday" component={Friday} />
+        <Route exact path="/saturday" component={Saturday} />
+        <Route exact path="/sunday" component={Sunday} />
+
         <Route path="/equipment" exact component={Equipment} />
         <Route path="/foodList" exact component={Foodlist} />
         <Route path="/schedule" exact component={Schedule} />
@@ -35,6 +51,7 @@ function App() {
         <Route path="/reschedule" exact component={Reschedule} />
         <Route path="/requested_order" exact component={Requested_order} />
         <Route exact path="/login" component={Login} />
+
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/admin" component={AdminLogin} />
         <Route exact path="/manageuser" component={ManageUser} />
