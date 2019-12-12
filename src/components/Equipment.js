@@ -1,130 +1,132 @@
-
 import React, { Component } from "react";
 import "../assets/css/Signup.css";
-import NavBarLogin from "../navigation/NavLogin"
+import NavBarUser from "../navigation/UserNav"
+import Footer from "../navigation/Footer"
 import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import Footer from "../navigation/Footer"
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import classnames from "classnames";
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import axios from 'axios';
-import { store } from 'react-notifications-component';
 
-
-export default class AddFlight extends Component {
+export default class YourTrips extends Component {
 
   constructor() {
     super();
 
     this.state = {
-      flightNumber: "",
-      departurePlace : "",
-      departureDate: "",
-      departureTime: "",
-      noOfSeats: "",
-      arrivalPlace:"",
-      arrivalDate: "",
-      arrivalTime:""
-      
+      flights: [{
+        order:12345,
+        equipment:"Heater",
+        requested: '12/9/2019',
+        delivered: '12/10/2019'
+        },
+      {
+        order:12345,
+        equipment:"Heater",
+        requested: '12/9/2019',
+        delivered: '12/10/2019'
+
+      }, {
+        order:12345,
+        equipment:"Heater",
+        requested: '12/9/2019',
+        delivered: '12/10/2019'
+
+      },
+      {
+        order:12345,
+        equipment:"Heater",
+        requested: '12/9/2019',
+        delivered: '12/10/2019'
+      }
+      ]
     };
-    this.handleValueChange = this.handleValueChange.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.onChangeDepartingDate = this.onChangeDepartingDate.bind(this);
-    this.onChangeArrivingDate = this.onChangeArrivingDate.bind(this);
   }
 
-
-  handleValueChange(e) {
-    let target = e.target;
-    let value = target.value;
-    let name = target.name;
-    this.setState({
-      [name]: value
-    });
-  }
-
-  handleChange(event) {
-    console.log(event.target.name)
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  }
-  onChangeDepartingDate(departingDate) {
-    this.setState({
-      departureDate: departingDate
-    })
-  }
-  onChangeArrivingDate(arrivingDate) {
-    this.setState({
-      arrivalDate: arrivingDate
-    })
-  }
 
   handleSubmit(e) {
     e.preventDefault();
-    const newFlight = {
-      flightNumber: this.state.flightNumber,
-      departurePlace : this.state.departurePlace,
-      departureDate: this.state.departureDate,
-      departureTime: this.state.departureTime,
-      noOfSeats: this.state.noOfSeats,
-      arrivalPlace:this.state.arrivalPlace,
-      arrivalDate: this.state.arrivalDate,
-      arrivalTime:this.state.arrivalTime
+    const newUser = {
+
     };
-    console.log(newFlight)
-    axios.post('http://localhost:5000/flights/add', newFlight)
-    .then(res => {
-          console.log(res.data)
-          store.addNotification({
-            title: "Flight added!",
-            message: "Flight is added!!!",
-            type: "success",
-            insert: "top",
-            container: "top-right",
-            animationIn: ["animated", "fadeIn"],
-            animationOut: ["animated", "fadeOut"],
-            width: 300,
-            dismiss: {
-              duration: 5000,
-              onScreen: true
-            }
-          });
-          this.props.history.push({pathname: '/listofflights'})
-    });
+
+  }
+  deleteTrip(item){
+    var array = [...this.state.flights]; // make a separate copy of the array
+    var index = array.indexOf(item)
+    if (index !== -1) {
+      array.splice(index, 1);
+      this.setState({flights: array});
+    }
   }
 
   render() {
     const { errors } = this.state;
     return (
       <div>
-        <NavBarLogin />
-        <div className="signup form-wrapper"  style={{ 'marginTop': '122px' }}>
-          <h2>Add Equipment</h2>
-          <form onSubmit={this.handleSubmit}>
-          <div className="inputBox vertical-center width70">
-              <label htmlFor="noOfSeats" class="mt20">Name of Equipment</label>
-              <input
-                type="text"               
-                placeholder="Arrival place"
-                name="arrivalPlace"
-                value={this.state.arrivalPlace}
-                onChange={this.handleValueChange}
-              />
+        <NavBarUser />
+        <div className="signup container yourtrips form-wrapper" style={{'marginTop': '122px'}}>
+          <h2>List of activities</h2>
+          <br></br>
+          <div class="row mb10">
+            <div class="col-md-1">
             </div>
-
-            <div className="inputBox vertical-center width70">
-              <label htmlFor="departureDate" class="mt20">Required Date*</label>
-              <DatePicker placeholderText="MM/DD/YYYY"
-                                selected={this.state.departureDate}
-                                onChange={this.onChangeDepartingDate}
-                            />
+            <div class="col-md-1">
+             <b> Order number</b>
             </div>
-          </form>
-          <h6>* indicates required field</h6>
+            <div class="col-md-1">
+            <b>Equipment Name</b>
+            </div>
+            <div class="col-md-1">
+            <b> Requested date</b>
+            </div>
+            <div class="col-md-1">
+              <b>delivered date</b>
+            </div>
+            <div class="col-md-1">
+              
+            </div>
+          </div>
+         
+          {this.state.flights.map(item => (
+            <div class="row mb10">
+              <div class="col-md-1">
+              Trip {this.state.flights.indexOf(item)+1}
+              </div>
+              <div class="col-md-1">
+              {item.order}
+              </div>
+              <div class="col-md-1">
+              {item.equipment} 
+              </div>
+              <div class="col-md-1">
+                {item.requested}
+              </div>
+              <div class="col-md-1">
+                {item.delivered}
+              </div>
+              <div class="col-md-1">
+                {item.arrivalDate}
+              </div>
+              <div class="col-md-1">
+              <Button
+                    block
+                    bssize="large"
+                    type="submit"
+                    onClick={e =>
+                      window.confirm("Are you sure you wish to delete this item?") &&
+                      this.deleteTrip(item)}
+                  > Delete
+                  </Button>
+              </div>
+            </div>
+          ))}
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   }
