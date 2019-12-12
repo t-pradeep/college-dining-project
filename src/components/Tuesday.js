@@ -18,9 +18,9 @@ class Foodlist extends Component{
                 </div>
                 <div className="col-md-7">
                   <h5>Available list</h5>
-                  <div> Grill Cheese</div>
+                  <div> Fries</div>
                   <div>  Grill Chicken</div>
-                  <div>  Ham Burger</div>
+                  <div>  Nuggets</div>
                 </div>
                 
 
@@ -31,9 +31,9 @@ class Foodlist extends Component{
                 </div>
                 <div className="col-md-7">
                   <h5>Available list</h5>
-                  <div> Cheese pizza</div>
+                  <div> pizza</div>
                   <div>  Chicken pizza</div>
-                  <div>  Pepperion</div>
+                  <div>  - </div>
                 </div>
                 
 
@@ -45,8 +45,8 @@ class Foodlist extends Component{
                 <div className="col-md-7">
                   <h5>Available list</h5>
                   <div> Grill Cheese</div>
-                  <div>  Grill Chicken</div>
-                  <div>  Ham Burger</div>
+                  <div>  Grill Bacon</div>
+                  <div>  Itallian Bread</div>
                 </div>
                 
 
@@ -57,7 +57,7 @@ class Foodlist extends Component{
                 </div>
                 <div className="col-md-7">
                   <h5>Available list</h5>
-                  <div> Grill Cheese</div>
+                  <div> - </div>
                   <div>  Grill Chicken</div>
                   <div>  Ham Burger</div>
                 </div>
@@ -66,26 +66,26 @@ class Foodlist extends Component{
               </div>
               <div className="row mb10">
                 <div className="col-md-3 vertical-center">
-                  <h5> Grill</h5>
+                  <h5> Bakery</h5>
+                </div>
+                <div className="col-md-7">
+                  <h5>Available list</h5>
+                  <div> Cake </div>
+                  <div>  Biscuit</div>
+                  <div>  Bread</div>
+                </div>
+                
+
+              </div>
+              <div className="row mb10">
+                <div className="col-md-3 vertical-center">
+                  <h5> Entree</h5>
                 </div>
                 <div className="col-md-7">
                   <h5>Available list</h5>
                   <div> Grill Cheese</div>
                   <div>  Grill Chicken</div>
-                  <div>  Ham Burger</div>
-                </div>
-                
-
-              </div>
-              <div className="row mb10">
-                <div className="col-md-3 vertical-center">
-                  <h5> Grill</h5>
-                </div>
-                <div className="col-md-7">
-                  <h5>Available list</h5>
-                  <div> Grill Cheese</div>
-                  <div>  Grill Chicken</div>
-                  <div>  Ham Burger</div>
+                  <div>  - </div>
                 </div>
                 
 
@@ -93,7 +93,7 @@ class Foodlist extends Component{
 
               <div className="row mb10">
                 <div className="col-md-3 vertical-center">
-                  <h5> Grill</h5>
+                  <h5> Tex Mex</h5>
                 </div>
                 <div className="col-md-7">
                   <h5>Available list</h5>
