@@ -24,7 +24,7 @@ class Schedule extends Component {
 
                     <div className="row mb10">
                         <div className="col-md-2 vertical-center">
-                            <h5> MONDAY</h5>
+                            <h5> Monday</h5>
                         </div>
                         <div className="col-md-3" vertical-center>
                             <h5>GRILL</h5>
@@ -44,10 +44,10 @@ class Schedule extends Component {
                     </div>
                     <div className="row mb10">
                         <div className="col-md-2 vertical-center">
-                            <h5> MONDAY</h5>
+                            <h5> Tuesday</h5>
                         </div>
                         <div className="col-md-3" vertical-center>
-                            <h5>GRILL</h5>
+                            <h5>Entree</h5>
                         </div>
                         <div className="col-md-7" vertical-center>
                             <div>Pradeepkumar 6AM to 10AM</div>
@@ -64,10 +64,10 @@ class Schedule extends Component {
                     </div>
                     <div className="row mb10">
                         <div className="col-md-2 vertical-center">
-                            <h5> MONDAY</h5>
+                            <h5> Wednesday </h5>
                         </div>
                         <div className="col-md-3 vertical-center">
-                            <h5>GRILL</h5>
+                            <h5>Tex Mex</h5>
                         </div>
                         <div className="col-md-7">
                             <div>Pradeepkumar 6AM to 10AM</div>
@@ -84,10 +84,10 @@ class Schedule extends Component {
                     </div>
                     <div className="row mb10">
                         <div className="col-md-2 vertical-center">
-                            <h5> MONDAY</h5>
+                            <h5> Thursday</h5>
                         </div>
                         <div className="col-md-3" vertical-center>
-                            <h5>GRILL</h5>
+                            <h5>Produce Market</h5>
                         </div>
                         <div className="col-md-7" vertical-center>
                             <div>Pradeepkumar 6AM to 10AM</div>
@@ -105,10 +105,10 @@ class Schedule extends Component {
 
                     <div className="row mb10">
                         <div className="col-md-2 vertical-center">
-                            <h5> MONDAY</h5>
+                            <h5> Friday </h5>
                         </div>
                         <div className="col-md-3" vertical-center>
-                            <h5>GRILL</h5>
+                            <h5>True Balance</h5>
                         </div>
                         <div className="col-md-7" vertical-center>
                             <div>Pradeepkumar 6AM to 10AM</div>
@@ -125,10 +125,10 @@ class Schedule extends Component {
                     </div>
                     <div className="row mb10">
                         <div className="col-md-2 vertical-center">
-                            <h5> MONDAY</h5>
+                            <h5> Saturday </h5>
                         </div>
                         <div className="col-md-3" vertical-center>
-                            <h5>GRILL</h5>
+                            <h5>MANGOLIAN</h5>
                         </div>
                         <div className="col-md-7" vertical-center>
                             <div>Pradeepkumar 6AM to 10AM</div>
@@ -147,7 +147,7 @@ class Schedule extends Component {
 
                     <div className="row mb10">
                         <div className="col-md-2 vertical-center">
-                            <h5> MONDAY</h5>
+                            <h5> Sunday</h5>
                         </div>
                         <div className="col-md-3" vertical-center>
                             <h5>GRILL</h5>

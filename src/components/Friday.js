@@ -66,7 +66,7 @@ class Foodlist extends Component{
               </div>
               <div className="row mb10">
                 <div className="col-md-3 vertical-center">
-                  <h5> Grill</h5>
+                  <h5> Bakery</h5>
                 </div>
                 <div className="col-md-7">
                   <h5>Available list</h5>
@@ -79,7 +79,7 @@ class Foodlist extends Component{
               </div>
               <div className="row mb10">
                 <div className="col-md-3 vertical-center">
-                  <h5> Grill</h5>
+                  <h5> Tex Mex</h5>
                 </div>
                 <div className="col-md-7">
                   <h5>Available list</h5>
@@ -93,7 +93,7 @@ class Foodlist extends Component{
 
               <div className="row mb10">
                 <div className="col-md-3 vertical-center">
-                  <h5> Grill</h5>
+                  <h5> Entree </h5>
                 </div>
                 <div className="col-md-7">
                   <h5>Available list</h5>
